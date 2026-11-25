@@ -19,10 +19,11 @@
             background: linear-gradient(135deg, #1f0a24 0%, #431247 50%, #19092b 100%);
             color: #fff;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         }
 
         /* Partikel hati melayang di latar belakang */
@@ -184,11 +185,12 @@
             width: 100%;
             max-width: 960px;
             min-height: 85vh;
+            margin: auto;
             display: none;
             justify-content: center;
             align-items: center;
             z-index: 10;
-            padding: 20px;
+            padding: 20px 20px 50px;
         }
 
         #slides-wrapper.visible {
@@ -316,6 +318,32 @@
 
             50% {
                 transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .slide {
+                padding: 15px 10px 40px;
+            }
+
+            .slide-title {
+                font-size: 2.2rem;
+            }
+
+            .polaroid img {
+                height: 180px;
+            }
+
+            .quote-card {
+                padding: 35px 22px;
+            }
+
+            .quote-text {
+                font-size: 1.9rem;
+            }
+
+            .btn-primary {
+                margin-bottom: 20px;
             }
         }
     </style>
